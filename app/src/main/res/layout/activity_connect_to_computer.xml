@@ -16,6 +16,11 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:hint="@string/UserNamesHint"
+        android:id="@+id/UserName"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:hint="@string/IPAddressHint"
         android:id="@+id/ipAddress"/>
     <Button

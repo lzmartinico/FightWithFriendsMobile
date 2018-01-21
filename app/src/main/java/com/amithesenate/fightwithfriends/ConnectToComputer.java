@@ -42,10 +42,22 @@ public class ConnectToComputer extends AppCompatActivity {
                     System.out.println("connected");
                     OutputStream outToServer = client.getOutputStream();
                     DataOutputStream out = new DataOutputStream(outToServer);
-                    out.writeUTF("test");
+                    EditText userNameText = (EditText) findViewById(R.id.UserName);
+                    final String userName = userNameText.getText().toString();
+                    out.writeUTF(userName);
                     InputStream inFromServer = client.getInputStream();
                     BufferedReader in = new BufferedReader(new InputStreamReader(inFromServer));
                     SocketSingleton.setSocket(client);
+                    while (!in.ready()) {
+                        String readline = in.readLine();
+                        System.out.println(readline);
+                        if ("success".equals(readline)){
+                            Intent intent = new Intent(ConnectToComputer.this, RemoteActivity.class);
+                            startActivity(intent);
+                        } else {
+                            System.out.println(in.readLine());
+                        }
+                    }
                 } catch (IOException e) {
                     e.printStackTrace();
                 }

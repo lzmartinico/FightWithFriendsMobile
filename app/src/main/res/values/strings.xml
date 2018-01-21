@@ -1,5 +1,10 @@
 <resources>
     <string name="app_name">Fight with Friends</string>
     <string name="IPAddressHint">IP Address</string>
+    <string name="UserNamesHint">Username</string>
     <string name="ConnectButtonText">Connect</string>
+
+    <string name="title_activity_remote">RemoteActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
 </resources>
