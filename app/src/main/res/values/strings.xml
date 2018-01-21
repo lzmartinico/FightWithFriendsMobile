@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Fight with Friends</string>
+    <string name="IPAddressHint">IP Address</string>
+    <string name="ConnectButtonText">Connect</string>
+</resources>
